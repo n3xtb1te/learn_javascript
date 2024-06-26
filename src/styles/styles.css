@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px; /* Add space between elements using flex-gap */
+}
+
+div {
+    padding: 5px 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+p {
+    margin: 0;
+}

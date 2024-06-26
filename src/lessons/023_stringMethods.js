@@ -1,0 +1,7 @@
+/**
+ * Methods of Primitives
+ */
+
+/**
+ * STRING
+ */
