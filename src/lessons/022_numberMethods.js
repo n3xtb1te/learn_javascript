@@ -127,3 +127,4 @@ console.log(parseInt('a123')); // NaN
 /**
  * Other math functions
  */
+console.log(Math.random()); // returns a random number from 0 to 1 (not including 1)
