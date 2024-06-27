@@ -127,5 +127,55 @@ console.log(parseInt('a123')); // NaN
 /**
  * Other math functions
  */
-console.log(Math.random()); // returns a random number from 0 to 1 (not including 1)
-console.log(Math.random);
+// Math.random() - returns a random number from 0 to 1 (not including 1)
+console.log(Math.random());
+// Math.max(a, b, c...) - returns the greatest from the arbitrary number of arguments
+console.log(Math.max(1, 100, 5)); // 100
+// Math.min(a, b, c...) - returns the smallest from the arbitrary number of arguments
+console.log(Math.min(1, 25, 0)); // 0
+// Math.pow(n, power) - returns n raised to the given power
+console.log(Math.pow(2, 10)); // 1024
+
+/**
+ * Tasks
+ */
+let numberOne = 12;
+let numberTwo = 23.2;
+console.log(parseFloat(numberOne) + parseFloat(numberTwo));
+
+
+console.log(1.35.toFixed(1)); // 1.4
+console.log(1.35.toFixed(20)); // 1.35000000000000008882
+console.log(6.35.toFixed(1)); // 6.3 (but why???) - because of the different precision loss
+console.log(6.35.toFixed(20)); // 6.34999999999999964473
+console.log(Math.round(6.35 * 10) / 10); // 6.4
+
+
+function readNumber() {
+    let num;
+
+    do {
+        num = prompt('Enter a number:');
+    } while (!isFinite(num)); // isFinite() because it converts value to number and ensures that is not NaN/Infinity
+
+    if (num === null || num === '') return null;
+
+    return parseFloat(num);
+}
+
+
+function random(min, max) {
+    console.log((Math.random() * (max - min)) + min);
+}
+
+random(1, 5);
+random(1, 5);
+random(1, 5);
+
+function randomInteger(min, max) {
+    console.log(Math.floor(Math.random() * (max - min + 1)) + min);
+}
+
+randomInteger(1, 5);
+randomInteger(1, 5);
+randomInteger(1, 5);
